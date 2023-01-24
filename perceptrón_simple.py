@@ -29,59 +29,6 @@ def weight_adjustment(y_predicted, y_train, weights, x_train):
 			# ~ print ('weights: {}'.format(weights)) 
 	return (weights)
 	
-	
-#if __name__ == "__main__":
-	# print("Number of epochs;Weights;Average Accuracy")
-	
-	# #para cada fold
-	# for foldi in range(1,4,1):
-		
-	# 	fold=str(foldi)
-	# 	# ~ print("El fold actual es: ",foldi)
-	# 	nfile = 'data_validation_train__3___'+fold+'_'+'.csv'
-	# 	nfiley = 'target_validation_train__3___'+fold+'_'+'.csv'
-		
-	# 	x_train = pd.read_csv(nfile, engine='python')
-	# 	y = pd.read_csv(nfiley, engine='python')
-	# 	y_train = y['target'].values
-		
-		
-	# 	#weights = np.array([]).append(len())
-		
-	# 	weights=np.zeros(13)
-	# 	# ~ print(weights)
-	# 	x_standard_scaler = preprocessing.StandardScaler().fit_transform(x_train)
-		
-	# 	epochs = [2,5,8,10]
-	# 	for epoch in epochs:
-	# 		for i in range (epoch):
-	# 			# ~ print ('----------------Iteración ', i, ' -------------------\n')
-	# 			weight_sums = np.dot(x_standard_scaler,weights.T)# Hacemos la transpuesta, aunque al ser los pesos un vector de una dimensión python no requiere hacer la transpuesta para resolver la multiplicación porque lo hace mediante el producto punto u.v = u1.v1 + u2.v2 + ... + un.vn
-	# 			# ~ print ('weight_sums:\n', weight_sums)
-	# 			y_predicted = activation_function(weight_sums)
-	# 			# ~ print ('y_predicted:', y_predicted)
-	# 			# ~ print ('y_true: ', y_train)
-				
-	# 			# ~ print ('accuracy: ', accuracy_score(y_train, y_predicted))
-				
-	# 			weights = weight_adjustment(y_predicted, y_train, weights, x_standard_scaler)
-		
-	# 		# ~ print ('final weights :', weights)
-	# 		# ~ print ('final accuracy: ', accuracy_score(y_train, y_predicted))
-	# 		# ~ w=" ".join(map(str, weights))
-	# 		# ~ print(w)
-	# 		# ~ print(""+epochs+";"+w+";"+accuracy_score(y_train, y_predicted))
-			
-	# 		print(epoch, end='')
-	# 		print(";", end='')
-	# 		# ~ print(weights, end='')
-	# 		for w in weights:
-	# 			print(w, end='')
-	# 			print(",", end='')
-	# 		print(";", end='')
-	# 		print(accuracy_score(y_train, y_predicted))
-	
-###########################################################SEGUNDA PARTE############################################################################################################
 #utilizando el 70% de los datos para entrenar y el 30% para validar 
 # Path: perceptrón_simple.py
 import numpy as np
